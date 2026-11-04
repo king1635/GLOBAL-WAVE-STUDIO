@@ -61,7 +61,7 @@ ImageFit imageFitFromId (const std::string& id);
 // A theme: what a .lynxtheme file holds and what Options › Theme edits.
 struct Spec
 {
-    std::string name = "LYNX";
+    std::string name = "GLOBAL WAVE STUDIO";
     std::uint32_t accent = defaultAccent;
     std::uint32_t background = defaultBackground;
     std::uint32_t workspace = 0;     // the workspace backdrop's colour; 0 = automatic (the theme's deepest surface)
@@ -76,7 +76,7 @@ struct Spec
     bool operator== (const Spec&) const = default;
 };
 
-// The built-in themes ("LYNX" first = the default look).
+// The built-in themes ("GLOBAL WAVE STUDIO" first = the default look).
 const std::vector<Spec>& builtInThemes();
 
 // The workspace backdrop colour of a theme (its own, or the palette's bg0).
