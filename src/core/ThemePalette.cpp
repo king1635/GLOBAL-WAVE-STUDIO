@@ -23,7 +23,7 @@ constexpr Palette builtIn {
     0xff0e0f12, 0xff15161a, 0xff1b1d22, 0xff23262c, 0xff2c2f37, 0xff363a43, 0xff434852, // bg0..bg6
     0xff2a2d34, 0xff3b3f48,                                                             // border, borderStrong
     0xffeceef2, 0xffa1a6b0, 0xff60656f,                                                 // text
-    0xffe5383b, 0xfff2545a, 0xffc12a30, 0xff5c1f24, 0xffffffff, 0x2ee5383b,             // accent family
+    0xffe89a3c, 0xfff2ad5f, 0xffc77b2e, 0xff5d3b20, 0xff111214, 0x2ee89a3c,             // accent family
     0xffc5c9d1, 0xff444955, 0xff2a2d34, 0xff33363f, 0xffe8a3a6,                         // knobs, steps
     0xff3a3e47, 0xff262930, 0xff1d1f24, 0xff17181c, 0xff1c1e23, 0xff16171b,             // grids, keys, rows
     0xffb3545a, 0xffff6b6e, 0xff4a4e57, 0xff3a3e47                                      // notes, LED
@@ -154,7 +154,7 @@ const std::vector<Spec>& builtInThemes()
             return s;
         };
         return std::vector<Spec> {
-            make ("LYNX", defaultAccent, defaultBackground), make ("Ocean", 0xff3d8bfd, 0xff12161d), make ("Emerald", 0xff2fbf71, 0xff131715),
+            make ("GLOBAL WAVE STUDIO", defaultAccent, defaultBackground), make ("Ocean", 0xff3d8bfd, 0xff12161d), make ("Emerald", 0xff2fbf71, 0xff131715),
             make ("Amber", 0xfff0a020, 0xff17150f),          make ("Violet", 0xff9d6bff, 0xff16141c), make ("Graphite", 0xffd5d8de, 0xff141414),
         };
     }();
