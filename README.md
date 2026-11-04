@@ -227,9 +227,11 @@ A report lists what was converted, what is approximated and what was left out. F
 > [!NOTE]
 > Every conversion rule comes from **behavioural** reverse engineering (decompilation studied, official manual and project data), recorded in [`docs/analise/`](docs/analise). Anything not confirmed is flagged as an approximation in [`docs/STATUS.md`](docs/STATUS.md).
 
-## Download
+## Upstream LYNX-SHARE packages — not GLOBAL WAVE STUDIO builds
 
-Every release on the [latest release page](https://github.com/Ka1-S/LYNX-SHARE/releases) has builds for all three
+> **Important:** the download links and installation instructions below are inherited from the upstream LYNX-SHARE project. They install the upstream-branded application, not a released GLOBAL WAVE STUDIO build. GLOBAL WAVE STUDIO does not yet publish its own installers. This section is retained as a reference while the fork's build and release pipeline is being adapted.
+
+Every release on the [upstream latest release page](https://github.com/Ka1-S/LYNX-SHARE/releases) has builds for all three
 platforms (`<v>` is the version, e.g. `0.1.10-alpha`):
 
 | OS | Download | Notes |
