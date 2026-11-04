@@ -59,7 +59,7 @@ inline juce::Colour knobTrack { 0xff464d5b };   // the unlit part of a knob's ri
 inline juce::Colour stepOff { 0xff2c313a };
 inline juce::Colour stepOffAlt { 0xff353a45 };   // every other group of 4 steps
 inline juce::Colour stepOn { 0xffe89a3c }; // = accent
-inline juce::Colour stepNote { 0xfff1c28e };     // a step that only has a Piano Roll note
+inline juce::Colour stepNote { 0xfff5d2a7 };     // a step that only has a Piano Roll note
 inline juce::Colour gridBar { 0xff3c424d };      // bar lines
 inline juce::Colour gridBeat { 0xff282d36 };     // beat lines
 inline juce::Colour gridStep { 0xff1f232a };     // step lines
@@ -67,8 +67,8 @@ inline juce::Colour keyWhite { 0xffd9dbe0 };
 inline juce::Colour keyBlack { 0xff191c22 };
 inline juce::Colour rowWhite { 0xff1e2229 };     // Piano Roll rows of white keys
 inline juce::Colour rowBlack { 0xff181b21 };     // rows of black keys
-inline juce::Colour noteSoft { 0xffb67e49 };     // note colour at velocity 0
-inline juce::Colour noteHard { 0xfff4b36b };     // note colour at velocity 1
+inline juce::Colour noteSoft { 0xffbc8f59 };     // note colour at velocity 0
+inline juce::Colour noteHard { 0xffeeb46f };     // note colour at velocity 1
 inline juce::Colour noteMuted { 0xff4c525d };
 inline juce::Colour audioClip { 0xff5a87b8 };
 } // namespace colour
