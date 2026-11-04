@@ -24,9 +24,9 @@ constexpr Palette builtIn {
     0xff2c313a, 0xff3d4354,                                                             // border, borderStrong
     0xffeceef2, 0xffa1a6b0, 0xff60656f,                                                 // text
     0xffe89a3c, 0xfff2ad5f, 0xffc77b2e, 0xff5d3b20, 0xff111214, 0x2ee89a3c,             // accent family
-    0xffc5c9d1, 0xff464d5b, 0xff2c313a, 0xff353a45, 0x00-a2d59,                         // knobs, steps
+    0xffc5c9d1, 0xff464d5b, 0xff2c313a, 0xff353a45, 0xfff5d2a7,                         // knobs, steps
     0xff3c424d, 0xff282d36, 0xff1f232a, 0xff191c22, 0xff1e2229, 0xff181b21,             // grids, keys, rows
-    0x0-4370a7, 0x0-114b91, 0xff4c525d, 0xff3c424d                                      // notes, LED
+    0xffbc8f59, 0xffeeb46f, 0xff4c525d, 0xff3c424d                                      // notes, LED
 };
 
 // A surface token for another background: the built-in step from bg1 to that token, applied to the new background
