@@ -5364,7 +5364,7 @@ juce::PopupMenu MainComponent::getMenuForIndex (int barIndex, const juce::String
         menu.addItem (tr ("Report a problem..."), [this] { crashreporter::showManualReport (&engine.getDeviceManager()); });
         if (updater::offered()) // (not in the Store build: the Store updates it)
             menu.addItem (tr ("Check for updates..."), [] { updater::checkNow(); });
-        menu.addItem (tr ("About LYNX SHARE"), [] {
+        menu.addItem (tr ("About GLOBAL WAVE STUDIO"), [] {
             auto* window = makeAboutWindow().release();
             window->enterModalState (true, nullptr, true);
             keepAboveMainWindow (*window);
@@ -5387,7 +5387,7 @@ std::unique_ptr<juce::AlertWindow> MainComponent::makeAboutWindow()
     struct About final : juce::AlertWindow
     {
         About()
-            : juce::AlertWindow ("LYNX SHARE " JUCE_APPLICATION_VERSION_STRING,
+            : juce::AlertWindow ("GLOBAL WAVE STUDIO " JUCE_APPLICATION_VERSION_STRING,
                                  tr ("Lightweight C++/JUCE DAW with the FL Studio workflow.\n"
                                      "Independent implementation: no Image-Line code was copied."),
                                  juce::MessageBoxIconType::NoIcon)
