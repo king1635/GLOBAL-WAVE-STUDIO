@@ -10,7 +10,7 @@
 // text stays readable. With LYNX's default accent and background it gives exactly the built-in palette.
 namespace lynx::themes
 {
-constexpr std::uint32_t defaultAccent = 0xffe5383b;     // LYNX red
+constexpr std::uint32_t defaultAccent = 0xffe89a3c;     // GLOBAL WAVE STUDIO copper
 constexpr std::uint32_t defaultBackground = 0xff15161a; // the app background (token bg1)
 
 // Every themeable token of ui/Theme.h (ARGB).
