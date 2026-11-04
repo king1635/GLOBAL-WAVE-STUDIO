@@ -11,7 +11,7 @@
 namespace lynx::themes
 {
 constexpr std::uint32_t defaultAccent = 0xffe89a3c;     // GLOBAL WAVE STUDIO copper
-constexpr std::uint32_t defaultBackground = 0xff15161a; // the app background (token bg1)
+constexpr std::uint32_t defaultBackground = 0xff171a20; // GLOBAL WAVE STUDIO app background (token bg1)
 
 // Every themeable token of ui/Theme.h (ARGB).
 struct Palette
