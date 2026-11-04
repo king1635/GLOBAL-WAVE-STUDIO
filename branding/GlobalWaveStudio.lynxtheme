@@ -1,0 +1,12 @@
+{
+  "format": "LYNX theme",
+  "version": 1,
+  "name": "GLOBAL WAVE STUDIO",
+  "accent": "#E89A3C",
+  "background": "#171A20",
+  "workspace": "auto",
+  "image": "",
+  "fit": "fill",
+  "imageOpacity": 1.0,
+  "dim": 0.0
+}
