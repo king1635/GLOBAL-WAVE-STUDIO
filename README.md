@@ -1,47 +1,24 @@
+<h1 align="center">GLOBAL WAVE STUDIO</h1>
+
+<p align="center"><strong>A professional music-production workstation in development.</strong><br>
+A custom fork based on <a href="https://github.com/Ka1-S/LYNX-SHARE">LYNX-SHARE</a>, built with C++20 and JUCE 8.</p>
+
 <p align="center">
-  <img src="docs/img/logo.png" alt="LYNX SHARE logo" width="128" height="128">
+  <a href="https://github.com/king1635/GLOBAL-WAVE-STUDIO"><strong>Source code</strong></a> ·
+  <a href="docs/GLOBAL_WAVE_STUDIO_SPEC.md"><strong>Technical direction</strong></a> ·
+  <a href="docs/GLOBAL_WAVE_STUDIO_ROADMAP.md"><strong>Roadmap</strong></a> ·
+  <a href="branding/README.md"><strong>Brand guide</strong></a> ·
+  <a href="https://github.com/Ka1-S/LYNX-SHARE"><strong>Upstream project</strong></a>
 </p>
 
-<h1 align="center">LYNX SHARE</h1>
+> **Development fork notice:** this repository is a personal fork of LYNX-SHARE, not an official release or a claim of authorship over the inherited code. The current source still retains upstream technical identifiers, packaging names and some UI labels while the rebrand is being introduced incrementally. Existing feature descriptions below describe the inherited codebase and must not be read as a claim that a separately branded GLOBAL WAVE STUDIO build has been released.
 
-<p align="center"><strong>A lightweight DAW with the FL Studio workflow.</strong><br>
-Channel Rack, Piano Roll, Playlist and Mixer in C++20 + JUCE 8, built to run well on any PC.<br>
-Windows, macOS and Linux.</p>
+The project inherits the upstream **GNU AGPL-3.0** license and third-party notices. See [LICENSE](LICENSE) and [THIRD_PARTY.md](THIRD_PARTY.md). Changes made in this fork remain subject to the applicable license terms.
 
-<p align="center">
-  <a href="https://github.com/Ka1-S/LYNX-SHARE/releases"><img src="https://img.shields.io/badge/Download-0.1.23%20alpha-d9534f?style=for-the-badge" alt="Download LYNX SHARE"></a>
-  <a href="https://apps.microsoft.com/detail/9NQRFBFDCX6N"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="28" alt="Get it from Microsoft"></a>
-  <a href="https://github.com/Ka1-S/LYNX-SHARE/releases"><img src="https://img.shields.io/github/downloads/Ka1-S/LYNX-SHARE/total?style=for-the-badge&label=downloads&color=24292f" alt="Total downloads"></a>
-  <a href="https://github.com/Ka1-S/LYNX-SHARE/stargazers"><img src="https://img.shields.io/github/stars/Ka1-S/LYNX-SHARE?style=for-the-badge&color=24292f" alt="GitHub stars"></a>
-</p>
+---
 
-<p align="center">
-  <a href="https://lynx-share.com"><strong>Website</strong></a> ·
-  <a href="https://github.com/Ka1-S/LYNX-SHARE/releases"><strong>Download</strong></a> ·
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#opens-fl-studio-projects">FL projects</a> ·
-  <a href="docs/USER_GUIDE.md">User guide</a> ·
-  <a href="docs/PLUGINS.md">Built-in plugins</a> ·
-  <a href="#building">Building</a> ·
-  <a href="docs/STATUS.md">Status</a> ·
-  <a href="docs/ROADMAP.md">Roadmap</a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/Ka1-S/LYNX-SHARE/actions/workflows/tests.yml"><img src="https://github.com/Ka1-S/LYNX-SHARE/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
-  <img src="https://img.shields.io/badge/C%2B%2B-20-ef7b22" alt="C++20">
-  <img src="https://img.shields.io/badge/JUCE-8-8a8a8a" alt="JUCE 8">
-  <img src="https://img.shields.io/badge/Windows-10%20%C2%B7%2011-24292f" alt="Windows 10 and 11">
-  <img src="https://img.shields.io/badge/macOS-11%2B%20%C2%B7%20Apple%20Silicon%20%C2%B7%20Intel-24292f" alt="macOS 11 or newer, Apple Silicon and Intel">
-  <img src="https://img.shields.io/badge/Linux-x86__64-24292f" alt="Linux x86_64">
-  <img src="https://img.shields.io/badge/VST3%20%C2%B7%20CLAP-supported-d9534f" alt="VST3 and CLAP">
-  <img src="https://img.shields.io/badge/status-alpha-f0ad4e" alt="Alpha">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-5cb85c" alt="AGPL-3.0 license"></a>
-</p>
-
-<p align="center">
-  <img src="docs/img/workspace.png" alt="The LYNX SHARE workspace: browser, playlist, piano roll, channel rack and mixer" width="100%">
-  <br><sub>LYNX SHARE's own demo project (<code>LYNX.exe --showcase</code>) in the 0.1.19 workspace: browser, Piano Roll, Channel Rack and Mixer.</sub>
+  <img src="docs/img/workspace.png" alt="Inherited LYNX-SHARE workspace: browser, playlist, piano roll, channel rack and mixer" width="100%">
+  <br><sub>Inherited upstream demo workspace shown for technical reference; GLOBAL WAVE STUDIO branding is still in progress.</sub>
 </p>
 
 ---
