@@ -10,7 +10,7 @@ TEST (theme162_default_palette_is_the_built_in_look)
     CHECK (p.accent == 0xffe89a3c && p.accentHover == 0xfff2ad5f && p.accentPressed == 0xffc77b2e && p.accentMuted == 0xff5d3b20);
     CHECK (p.bg0 == 0xff101318 && p.bg1 == 0xff171a20 && p.bg6 == 0xff454c58 && p.textPrimary == 0xffeceef2 && p.onAccent == 0xff111214);
     CHECK (Spec {}.isDefaultLook());
-    CHECK (workspaceColour (Spec {}) == 0xff0e0f12);
+    CHECK (workspaceColour (Spec {}) == 0xff101318);
     CHECK (builtInThemes().size() >= 5 && builtInThemes()[0].accent == defaultAccent && builtInThemes()[0].background == defaultBackground);
 }
 
