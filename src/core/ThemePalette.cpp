@@ -18,7 +18,7 @@ std::uint32_t rgb (int r, int g, int b)
     return 0xff000000u | (clamp (r) << 16) | (clamp (g) << 8) | clamp (b);
 }
 
-// The built-in palette (the values ui/Theme.h shipped with before themes existed).
+// GLOBAL WAVE STUDIO built-in palette; keep these tokens in sync with ui/Theme.h.
 constexpr Palette builtIn {
     0xff101318, 0xff171a20, 0xff1d2128, 0xff252a32, 0xff2e333d, 0xff383e49, 0xff454c58, // bg0..bg6
     0xff2c313a, 0xff3d4354,                                                             // border, borderStrong
