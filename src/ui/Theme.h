@@ -37,7 +37,7 @@ inline juce::Colour accent { 0xffe89a3c };
 inline juce::Colour accentHover { 0xfff2ad5f };
 inline juce::Colour accentPressed { 0xffc77b2e };
 inline juce::Colour accentMuted { 0xff5d3b20 };  // tinted backgrounds (armed, selected rows)
-inline juce::Colour onAccent { 0xffffffff };     // text/icons drawn on the accent
+inline juce::Colour onAccent { 0xff111214 };     // high-contrast text/icons on the copper accent
 
 // semantic
 inline juce::Colour selection { 0xffe89a3c }; // = accent: selected notes/clips outline
@@ -208,7 +208,7 @@ inline juce::Colour toolbar { 0xff252a32 }; // = colour::bg3
 inline juce::Colour channelButton { 0xff2e333d }; // = colour::bg4
 inline juce::Colour channelButtonSelected { 0xff454c58 }; // = colour::bg6
 inline juce::Colour knobBackground { 0xff101318 }; // = colour::bg0
-inline juce::Colour stepOn { 0xffe5383b }; // = colour::stepOn
+inline juce::Colour stepOn { 0xffe89a3c }; // = colour::stepOn
 inline juce::Colour stepOnOffGrid { 0xfff1c28e }; // = colour::stepNote
 inline juce::Colour accentOrange { 0xffe89a3c }; // = colour::accent
 inline juce::Colour accentGreen { 0xff3ddc84 }; // = colour::ledOn
