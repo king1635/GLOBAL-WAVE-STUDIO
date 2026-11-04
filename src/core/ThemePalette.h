@@ -7,7 +7,7 @@
 // User themes (round 162d, issues #8 / #9): the accent colour, the background and the workspace backdrop are the
 // user's choice. This is the pure part (no JUCE): it derives every colour token of ui/Theme.h from the two colours the
 // user picks, so the whole UI keeps its relations (elevation steps, hover/pressed shades, tinted selections) and the
-// text stays readable. With LYNX's default accent and background it gives exactly the built-in palette.
+// text stays readable. With the default GLOBAL WAVE STUDIO accent and background it gives exactly the built-in palette.
 namespace lynx::themes
 {
 constexpr std::uint32_t defaultAccent = 0xffe89a3c;     // GLOBAL WAVE STUDIO copper
@@ -42,7 +42,7 @@ DigitDisplayColours<C> digitDisplayColours (C bg0, C border, C accent, C accentH
 
 // The palette for an accent and a background (alpha is ignored: both are opaque).
 Palette derivePalette (std::uint32_t accent, std::uint32_t background);
-// LYNX's built-in palette (= derivePalette (defaultAccent, defaultBackground)).
+// GLOBAL WAVE STUDIO's built-in palette (= derivePalette (defaultAccent, defaultBackground)).
 const Palette& defaultPalette();
 
 // How the workspace image is laid out.
