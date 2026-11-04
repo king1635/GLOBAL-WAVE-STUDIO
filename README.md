@@ -17,6 +17,7 @@ The project inherits the upstream **GNU AGPL-3.0** license and third-party notic
 
 ---
 
+<p align="center">
   <img src="docs/img/workspace.png" alt="Inherited LYNX-SHARE workspace: browser, playlist, piano roll, channel rack and mixer" width="100%">
   <br><sub>Inherited upstream demo workspace shown for technical reference; GLOBAL WAVE STUDIO branding is still in progress.</sub>
 </p>
