@@ -20,13 +20,13 @@ std::uint32_t rgb (int r, int g, int b)
 
 // The built-in palette (the values ui/Theme.h shipped with before themes existed).
 constexpr Palette builtIn {
-    0xff0e0f12, 0xff15161a, 0xff1b1d22, 0xff23262c, 0xff2c2f37, 0xff363a43, 0xff434852, // bg0..bg6
-    0xff2a2d34, 0xff3b3f48,                                                             // border, borderStrong
+    0xff101318, 0xff171a20, 0xff1d2128, 0xff252a32, 0xff2e333d, 0xff383e49, 0xff454c58, // bg0..bg6
+    0xff2c313a, 0xff3d4354,                                                             // border, borderStrong
     0xffeceef2, 0xffa1a6b0, 0xff60656f,                                                 // text
     0xffe89a3c, 0xfff2ad5f, 0xffc77b2e, 0xff5d3b20, 0xff111214, 0x2ee89a3c,             // accent family
-    0xffc5c9d1, 0xff444955, 0xff2a2d34, 0xff33363f, 0xffe8a3a6,                         // knobs, steps
-    0xff3a3e47, 0xff262930, 0xff1d1f24, 0xff17181c, 0xff1c1e23, 0xff16171b,             // grids, keys, rows
-    0xffb3545a, 0xffff6b6e, 0xff4a4e57, 0xff3a3e47                                      // notes, LED
+    0xffc5c9d1, 0xff464d5b, 0xff2c313a, 0xff353a45, 0x00-a2d59,                         // knobs, steps
+    0xff3c424d, 0xff282d36, 0xff1f232a, 0xff191c22, 0xff1e2229, 0xff181b21,             // grids, keys, rows
+    0x0-4370a7, 0x0-114b91, 0xff4c525d, 0xff3c424d                                      // notes, LED
 };
 
 // A surface token for another background: the built-in step from bg1 to that token, applied to the new background
