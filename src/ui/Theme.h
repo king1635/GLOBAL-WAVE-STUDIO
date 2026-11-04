@@ -7,8 +7,8 @@
 // LYNX design tokens: the single source of colours, type sizes, spacing and radii for the whole UI,
 // plus the LookAndFeel that draws every stock JUCE widget with them.
 //
-// Identity: dark, flat, high contrast, with one red accent used sparingly (selection, active
-// states, playhead/record, primary actions). Surfaces get lighter as they rise ("elevation").
+// GLOBAL WAVE STUDIO identity: dark, flat, high contrast, with a copper accent used for
+// brand, selection, playhead and primary actions. Semantic audio colours remain distinct.
 namespace lynx::theme
 {
 // --- colours -----------------------------------------------------------------------------------
@@ -33,16 +33,16 @@ inline juce::Colour textSecondary { 0xffa1a6b0 };
 inline juce::Colour textDisabled { 0xff60656f };
 
 // the red accent
-inline juce::Colour accent { 0xffe5383b };
-inline juce::Colour accentHover { 0xfff2545a };
-inline juce::Colour accentPressed { 0xffc12a30 };
-inline juce::Colour accentMuted { 0xff5c1f24 };  // tinted backgrounds (armed, selected rows)
+inline juce::Colour accent { 0xffe89a3c };
+inline juce::Colour accentHover { 0xfff2ad5f };
+inline juce::Colour accentPressed { 0xffc77b2e };
+inline juce::Colour accentMuted { 0xff5d3b20 };  // tinted backgrounds (armed, selected rows)
 inline juce::Colour onAccent { 0xffffffff };     // text/icons drawn on the accent
 
 // semantic
-inline juce::Colour selection { 0xffe5383b }; // = accent: selected notes/clips outline
-inline juce::Colour selectionFill { 0x2ee5383b };               // selection rectangles
-inline juce::Colour playhead { 0xffe5383b }; // = accent
+inline juce::Colour selection { 0xffe89a3c }; // = accent: selected notes/clips outline
+inline juce::Colour selectionFill { 0x2ee89a3c };               // selection rectangles
+inline juce::Colour playhead { 0xffe89a3c }; // = accent
 inline juce::Colour record { 0xffff3b3f };
 inline juce::Colour automation { 0xff4cc9c0 };                   // automation curves and clips
 inline juce::Colour info { 0xff6ea8fe };                         // secondary values (pan, links)
@@ -58,7 +58,7 @@ inline juce::Colour knobArc { 0xffc5c9d1 };     // rotary value arcs at rest (ac
 inline juce::Colour knobTrack { 0xff444955 };   // the unlit part of a knob's ring (reads on every panel surface)
 inline juce::Colour stepOff { 0xff2a2d34 };
 inline juce::Colour stepOffAlt { 0xff33363f };   // every other group of 4 steps
-inline juce::Colour stepOn { 0xffe5383b }; // = accent
+inline juce::Colour stepOn { 0xffe89a3c }; // = accent
 inline juce::Colour stepNote { 0xffe8a3a6 };     // a step that only has a Piano Roll note
 inline juce::Colour gridBar { 0xff3a3e47 };      // bar lines
 inline juce::Colour gridBeat { 0xff262930 };     // beat lines
@@ -210,10 +210,10 @@ inline juce::Colour channelButtonSelected { 0xff434852 }; // = colour::bg6
 inline juce::Colour knobBackground { 0xff0e0f12 }; // = colour::bg0
 inline juce::Colour stepOn { 0xffe5383b }; // = colour::stepOn
 inline juce::Colour stepOnOffGrid { 0xffe8a3a6 }; // = colour::stepNote
-inline juce::Colour accentOrange { 0xffe5383b }; // = colour::accent
+inline juce::Colour accentOrange { 0xffe89a3c }; // = colour::accent
 inline juce::Colour accentGreen { 0xff3ddc84 }; // = colour::ledOn
 inline juce::Colour accentBlue { 0xff6ea8fe }; // = colour::info
-inline juce::Colour playhead { 0xffe5383b }; // = colour::playhead
+inline juce::Colour playhead { 0xffe89a3c }; // = colour::playhead
 inline juce::Colour text { 0xffeceef2 }; // = colour::textPrimary
 
 // --- LookAndFeel ---------------------------------------------------------------------------------
