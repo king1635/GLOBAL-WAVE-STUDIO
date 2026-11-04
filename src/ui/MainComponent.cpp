@@ -649,7 +649,7 @@ MainComponent::MainComponent (AudioEngine& e, bool restoreUserSettings)
         safe->projectName = hostName.isNotEmpty() ? tr ("Live session with {0}", { hostName }) : tr ("Live session");
         safe->updateTitle();
     };
-    // round 169j: the host's LYNX SHARE restarted during a session: its journal's song becomes the open project again
+    // round 169j: the host's GLOBAL WAVE STUDIO restarted during a session: its journal's song becomes the open project again
     live->onResumed = [safe = juce::Component::SafePointer<MainComponent> (this)] (Song song) {
         if (safe == nullptr)
             return;
@@ -1559,7 +1559,7 @@ void MainComponent::connectBrowser (BrowserComponent& b)
             return false;
         if (! mixer.loadPresetOnSelection (file))
             juce::AlertWindow::showMessageBoxAsync (juce::MessageBoxIconType::WarningIcon, tr ("Open mixer track state"),
-                                                    tr ("This file is not a mixer track state LYNX SHARE can read."));
+                                                    tr ("This file is not a mixer track state GLOBAL WAVE STUDIO can read."));
         return true;
     };
     // the Browser's "Current project" items (REA_rodada115)
@@ -3534,7 +3534,7 @@ void MainComponent::timerCallback()
         PluginHost::settingsFolder().getChildFile ("plugin-crashes.log").appendText (lines[lines.size() - 1] + "\n");
         juce::AlertWindow::showMessageBoxAsync (
             juce::MessageBoxIconType::WarningIcon, tr ("Plugin crashed"),
-            tr ("The plugin \"{0}\" crashed and was switched off, so LYNX SHARE and your project kept running (the effect is bypassed, an "
+            tr ("The plugin \"{0}\" crashed and was switched off, so GLOBAL WAVE STUDIO and your project kept running (the effect is bypassed, an "
                 "instrument stays silent). Save your project; the plugin loads again the next time you open it.",
                 { names[names.size() - 1] }));
     }
@@ -3631,10 +3631,10 @@ void MainComponent::timerCallback()
             if (lynx::rt::shouldShowHint (PluginHost::settingsFolder().getChildFile ("realtime-hint-shown")))
                 juce::AlertWindow::showMessageBoxAsync (
                     juce::MessageBoxIconType::InfoIcon, tr ("Real-time priority"),
-                    tr ("The sound broke up, and Linux runs LYNX SHARE's audio thread at normal priority. Real-time priority makes dropouts much rarer:\n\n"
+                    tr ("The sound broke up, and Linux runs GLOBAL WAVE STUDIO's audio thread at normal priority. Real-time priority makes dropouts much rarer:\n\n"
                         "- install rtkit (package \"rtkit\"; most desktops already have it), or\n"
                         "- add yourself to the \"audio\" group with an rtprio limit in /etc/security/limits.d (as for JACK),\n\n"
-                        "then log out and in again. LYNX SHARE never needs root. Options > Audio settings shows the current state."));
+                        "then log out and in again. GLOBAL WAVE STUDIO never needs root. Options > Audio settings shows the current state."));
         }
     }
 
@@ -3674,7 +3674,7 @@ void MainComponent::updateTitle()
             liveState = " [" + (st == S::live ? tr ("LIVE") : st == S::reconnecting ? tr ("Reconnecting...") : st == S::waitingHost ? tr ("Waiting for the host...") : tr ("Connecting...")) + "]";
         }
         window->setName ((engine.isModified() ? "* " : "")
-                         + (projectName.isNotEmpty() ? "LYNX SHARE - " + projectName : juce::String ("LYNX SHARE")) + importedSuffix + liveState);
+                         + (projectName.isNotEmpty() ? "GLOBAL WAVE STUDIO - " + projectName : juce::String ("GLOBAL WAVE STUDIO")) + importedSuffix + liveState);
     }
 }
 
@@ -4233,7 +4233,7 @@ void MainComponent::checkInterruptedTakes()
         names.add (juce::File (juce::String::fromUTF8 (j.wav.c_str())).getFileName());
     const auto folder = juce::File (juce::String::fromUTF8 (takes.front().wav.c_str())).getParentDirectory();
     auto* w = new juce::AlertWindow (tr ("Recordings recovered"),
-                                     tr ("LYNX SHARE was recording when it stopped. These takes were saved and repaired:\n{0}\n\nPut them on the Playlist "
+                                     tr ("GLOBAL WAVE STUDIO was recording when it stopped. These takes were saved and repaired:\n{0}\n\nPut them on the Playlist "
                                          "where they were recorded?", { names.joinIntoString ("\n") }),
                                      juce::MessageBoxIconType::InfoIcon);
     w->addButton (tr ("Put them on the Playlist"), 1, juce::KeyPress (juce::KeyPress::returnKey));
@@ -4273,7 +4273,7 @@ void MainComponent::checkPreviousSession (juce::Time sessionStart)
         return; // nothing was saved in that session
     const auto backup = folder.getChildFile (juce::String::fromUTF8 (name.c_str()) + ProjectFile::extension);
 
-    auto* w = new juce::AlertWindow (tr ("LYNX SHARE did not close properly"),
+    auto* w = new juce::AlertWindow (tr ("GLOBAL WAVE STUDIO did not close properly"),
                                      tr ("The last session ended unexpectedly. Open the newest backup it saved?\n{0}  ({1})",
                                          { backup.getFileName(), backup.getLastModificationTime().formatted ("%Y-%m-%d %H:%M") }),
                                      juce::MessageBoxIconType::WarningIcon);
@@ -4709,7 +4709,7 @@ void MainComponent::showMissingFiles (bool afterOpening)
                     auto it = std::find_if (info.plugins.begin(), info.plugins.end(), [&] (const MissingPlugin& p) { return p.name == name; });
                     if (it == info.plugins.end())
                         it = info.plugins.insert (info.plugins.end(),
-                                                  MissingPlugin { name, {}, TR_NOOP ("LYNX SHARE substitute: {0} (the original plugin is used again once it is installed). FL Studio plays a missing plugin's slot unprocessed: a substitute slot's menu › Bypass all LYNX SHARE substitutes of this project does the same"),
+                                                  MissingPlugin { name, {}, TR_NOOP ("GLOBAL WAVE STUDIO substitute: {0} (the original plugin is used again once it is installed). FL Studio plays a missing plugin's slot unprocessed: a substitute slot's menu › Bypass all GLOBAL WAVE STUDIO substitutes of this project does the same"),
                                                                   effectInfo (fx.kind).name });
                     const auto user = song.mixer[t].name.empty() ? (t == 0 ? std::string ("Master") : "Insert " + std::to_string (t)) : song.mixer[t].name;
                     if (std::find (it->usedBy.begin(), it->usedBy.end(), user) == it->usedBy.end())
@@ -4833,7 +4833,7 @@ void MainComponent::exportMidiFile()
 {
     // FL's File › Export › "MIDI file...": the arrangement's notes (or the current pattern's) as a Standard MIDI File
     const auto folder = currentFile.existsAsFile() ? currentFile.getParentDirectory() : juce::File::getSpecialLocation (juce::File::userMusicDirectory);
-    const auto name = projectName.isNotEmpty() ? projectName : juce::String ("LYNX SHARE");
+    const auto name = projectName.isNotEmpty() ? projectName : juce::String ("GLOBAL WAVE STUDIO");
     fileChooser = std::make_unique<juce::FileChooser> (tr ("Export MIDI file"), folder.getChildFile (name + ".mid"), "*.mid");
     juce::Component::SafePointer<MainComponent> safe (this);
     fileChooser->launchAsync (juce::FileBrowserComponent::saveMode | juce::FileBrowserComponent::warnAboutOverwriting,
@@ -4897,7 +4897,7 @@ void MainComponent::save (bool askForFile)
                                   }
                                   // FL warns the same way: the backup folder is cleaned up as new backups arrive
                                   auto* w = new juce::AlertWindow (tr ("Save in the backup folder?"),
-                                                                   tr ("This folder keeps LYNX SHARE's automatic backups and old ones are deleted as new "
+                                                                   tr ("This folder keeps GLOBAL WAVE STUDIO's automatic backups and old ones are deleted as new "
                                                                        "ones arrive, so a project saved here can be lost. If you opened a backup, save it "
                                                                        "somewhere else."),
                                                                    juce::MessageBoxIconType::WarningIcon);
@@ -5419,7 +5419,7 @@ void MainComponent::showLanguageChoice (const juce::String& id)
     const juce::LocalisedStrings strings (table, false);
     auto say = [&] (const char* text) { return table.isEmpty() ? juce::String::fromUTF8 (text) : strings.translate (juce::String::fromUTF8 (text)); };
 
-    auto* window = new juce::AlertWindow (say (TR_NOOP ("Language")), say (TR_NOOP ("The new language is applied when LYNX SHARE restarts.")),
+    auto* window = new juce::AlertWindow (say (TR_NOOP ("Language")), say (TR_NOOP ("The new language is applied when GLOBAL WAVE STUDIO restarts.")),
                                           juce::MessageBoxIconType::InfoIcon);
     window->addButton (say (TR_NOOP ("Restart now")), 1, juce::KeyPress (juce::KeyPress::returnKey));
     window->addButton (say (TR_NOOP ("Later")), 0, juce::KeyPress (juce::KeyPress::escapeKey));
@@ -5606,7 +5606,7 @@ void MainComponent::showHelp()
 {
     juce::DialogWindow::LaunchOptions options;
     options.content.setOwned (makeHelpContent (&keyMap).release());
-    options.dialogTitle = tr ("LYNX SHARE shortcuts");
+    options.dialogTitle = tr ("GLOBAL WAVE STUDIO shortcuts");
     options.dialogBackgroundColour = theme::colour::bg2;
     options.useNativeTitleBar = true;
     options.resizable = true;
@@ -5692,7 +5692,7 @@ void MainComponent::showImportReport()
     if (const auto& matched = engine.getMatchedPlugins(); ! matched.isEmpty())
         text << tr ("Plugins found on this PC:") << "\n  " << matched.joinIntoString ("\n  ") << "\n\n";
     if (! missing.isEmpty())
-        text << tr ("Plugins not installed on this PC (or in a folder LYNX SHARE doesn't scan; Options > Setup wizard):") << "\n  "
+        text << tr ("Plugins not installed on this PC (or in a folder GLOBAL WAVE STUDIO doesn't scan; Options > Setup wizard):") << "\n  "
              << missing.joinIntoString ("\n  ") << "\n\n";
     if (const auto& lost = engine.getPluginsWithoutState(); ! lost.isEmpty())
         text << tr ("Plugins found but playing their default settings (the project saved them for the other format, VST2/VST3):") << "\n  "
